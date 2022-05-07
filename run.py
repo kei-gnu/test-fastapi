@@ -1,4 +1,5 @@
-from controllers import *
+from urls import app
+import uvicorn
 
-# FastAPI routing function
-app.add_api_route('/', index_test)
+if __name__ == '__main__':
+    uvicorn.run(app=app)
