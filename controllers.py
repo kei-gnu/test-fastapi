@@ -9,9 +9,10 @@ app = FastAPI(
 )
 
 # new template related settings(jinja2)
-templates = Jinja2Templates(directory="templates_test")
+templates = Jinja2Templates(directory="templates")
 # Jinja2.Environment : settings for filter and global
 jinja_env = templates.env    
 
 def index_test(request: Request):
-    return {'Hello': 'World!!'}
+    return templates.TemplateResponse('index.html',
+                                        {'request': request}) # new change!
