@@ -7,5 +7,5 @@ app = FastAPI(
     version='1.0 beta test'
 )
 
-def index(request: Request):
+def index_test(request: Request):
     return {'Hello': 'World!!'}
